@@ -32,5 +32,17 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-    return 0;
+    if (array === undefined) {
+        return 0;
+    } else if (array[0] === undefined) {
+        return 0;
+    }  else {
+        let summNumber = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            summNumber += array[i];
+        }
+
+        return summNumber / array.length;
+    }
 }
